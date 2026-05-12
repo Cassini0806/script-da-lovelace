@@ -2,6 +2,10 @@ import os
 import subprocess
 import click 
 
+#Este script lista todos os arquivos e diretórios de uma pasta especificada e os descarta na lixeira do sistema.
+#Para implementa-lo, certifique-se primeiro de possuir os pacotes do python Click e do Trash-CLI. Após isso, programe o ciclo de descarte usando um cronjob, chamando o interpretador python seguido do endereço deste arquivo e o caminho da pasta a ser esvaziada. Ex: @weekly python ~/user/lixero.py ~/user/Downloads
+#É recomendado que os caminhos do cronjob sejam descritos desde o root.
+
 @click.command()
 @click.argument("caminho")
 
